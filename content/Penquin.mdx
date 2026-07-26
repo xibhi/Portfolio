@@ -1,0 +1,124 @@
+---
+title: "Why My Penquin Walked Toward the Mountain"
+publishedAt: "2026-06-17"
+---
+
+![Penquin](/writing/Penquin.webp)
+
+I kept working on the V2 for a while before I admitted to myself that I wasn't going to finish it.
+
+Not because I ran out of time. Not because it was technically hard. But because somewhere in the middle of building it, I couldn't stop asking myself a question I had no good answer to: *Why would anyone use this?*
+
+That question eventually won.
+
+
+## The original problem
+
+When I first got into bug bounty hunting, the thing that slowed me down the most wasn't skill. It was the sheer chaos of how information was organized — or rather, how it wasn't.
+
+Commands were scattered across random GitHub repositories. Articles were buried across a dozen different personal blogs. Browser extensions that actually mattered were things you only discovered when someone happened to mention them in a Discord server. YouTube channels were found through recommendations from recommendations. Nothing was in one place.
+
+This is a real problem when you're starting out. You spend more time searching for how to do something than actually doing it. The searching itself becomes the work, which is exhausting and discouraging.
+
+So I built Penquin.
+
+The idea was simple. One place where a bug bounty hunter could find commands, tools, browser extensions, articles, YouTube channels, and resources — without spending hours digging around. A curated collection. Organized. Updated. Useful.
+
+The first version launched and the reception was better than I expected. People actually used it. Beginners especially found it helpful. The company I work at as an innovation lead, Tekkit, built a whole bootcamp around it — teaching people how to use Penquin to learn bug bounty hunting and start earning. That wasn't something I planned for. It just happened.
+
+So of course I started working on V2.
+
+
+## What happened while building V2
+
+I got a few months into V2 when the question started showing up.
+
+Not loudly. Just quietly, in the background, every time I sat down to work on it. I'd be adding a new section, or reorganizing a category, or thinking about what new tools to include — and I'd think: *Who actually needs this now?*
+
+I tried to ignore it. Kept building. But the question kept coming back, and it kept getting harder to dismiss.
+
+The problem Penquin was solving — centralized, curated access to scattered information — had started to feel like a problem that no longer needed a dedicated website to solve it.
+
+Let me explain what I mean.
+
+When I originally built Penquin, finding good bug bounty commands wasn't simple. You had to know where to look, bookmark the right repositories, and keep up with people posting updates. If you asked Claude or GPT for a specific recon command, you'd get something generic that might not even work in a real scenario.
+
+That's not true anymore.
+
+Claude Code, for instance, understands what you're trying to do in natural language and can generate or run the actual commands for your specific situation. You don't need a pre-written command reference when the AI can write the right command on the spot, in context, for your specific target. The whole value of a static command collection starts to disappear.
+
+Same thing with articles. Awesome Bug Bounty Writeups already aggregates thousands of writeups in a way I could never keep up with. And if someone wants something more personalized — "show me writeups about SSRF on cloud infrastructure" — they can just ask an AI and get exactly that. A curated list by one person can't compete with that.
+
+YouTube channels? I honestly just asked Claude to give me the 10 best bug bounty channels once as a test. It gave me a solid list with actual reasoning for each one. It took about five seconds.
+
+The internet didn't just change. It changed in a direction that directly addressed the problem Penquin was built around.
+
+
+## The maintenance math stopped working
+
+There's another side to this that's more practical.
+
+Keeping Penquin actually useful required constant work. Tools change. New techniques get published. Old articles become outdated. Channels stop posting. New channels appear. Browser extensions get deprecated. Every week there was something that needed updating.
+
+That's fine when the effort produces proportional value. But as the core value proposition started to shrink, the maintenance burden didn't. If anything, it grew — because more things were being created faster than I could track them.
+
+At some point the math just stopped working. More work, less unique value. That's a bad trend.
+
+And I don't think this is a Penquin-specific problem. I think this is a pattern that's going to keep appearing.
+
+
+## What AI actually did to products like Penquin
+
+Here's what I think happened, more broadly.
+
+There's a category of software product whose entire value comes from aggregating and organizing information that exists elsewhere. Link directories. Resource hubs. Curated collections. Bookmarked tool lists. These things used to have real value because the cost of discovery was high. If you didn't know where to look, you'd miss things. A curated list by someone who did know where to look was genuinely useful.
+
+AI made the cost of discovery nearly zero.
+
+When you can ask a question in natural language and get a personalized, contextual, up-to-date answer in seconds — the static curated list becomes a downgrade. It's slower, it's less personalized, it requires someone to maintain it, and it can't adapt to your specific question.
+
+The lifespan of information aggregation products just got a lot shorter. Not because they were badly built. Not because the people who made them didn't know what they were doing. But because the fundamental need they were solving got absorbed by something else.
+
+Penquin was well-received. People genuinely liked it. Tekkit built a whole bootcamp on top of it. That's not failure by any normal definition.
+
+But the original problem that made Penquin worth building in the first place — the fragmentation and inaccessibility of bug bounty resources — stopped being a compelling problem around the time I was planning the V2.
+
+I kept building anyway for a while because the feedback was positive, and it felt wrong to stop something that people were using and asking for. The uncomfortable truth is that positive feedback about a past version of a product doesn't tell you anything about whether building the next version makes sense. People wanted V2. That felt like enough justification to keep going.
+
+It wasn't.
+
+
+## The actual lesson
+
+There's a difference between a project that failed and a project that succeeded but lost its reason to exist.
+
+Penquin didn't fail. But the conditions that made it worth building changed faster than I was paying attention to. And once I actually stopped and looked at those conditions honestly, I couldn't justify the V2.
+
+I think the harder lesson here is about how to think about the shelf life of what you're building, especially if what you're building is primarily an information layer.
+
+Before I started Penquin, I asked: *Does this problem exist?* It did.
+
+What I didn't ask — and what I should have asked before starting V2 — was: *Is this problem still worth solving the same way?*
+
+That's a different question. And the answer changes over time.
+
+The assumption that made Penquin useful in 2022 or 2023 — that information about bug bounty hunting was hard to find and centralize — became significantly less true by the time I was planning V2. I was building on top of an assumption I hadn't re-examined.
+
+That's the trap with V2s in general. You're operating on the success signals of V1, which were generated in a different environment. The feedback tells you the old version worked, not that a new version will.
+
+
+## What changes now
+
+Nothing dramatic, honestly.
+
+I'm not writing this as some sort of announcement. Most people who used Penquin probably don't need a post-mortem. The thing just stopped being maintained and most people probably figured it out.
+
+But I've been thinking about this for a while and it felt worth writing down — not as closure, but because the pattern feels generalizable.
+
+If you're building something that's primarily an information layer, a directory, a curated collection, or a resource hub: the question isn't just whether the problem exists today. It's whether the problem will still exist in the same form by the time you've finished building, and whether the way you're solving it is actually better than just asking an AI.
+
+That's worth asking before you start. I didn't ask it clearly enough, and I spent time building toward a version of the world that was already changing underneath me.
+
+For what it's worth, Penquin worked. It helped people. I don't regret building it.
+
+I just think it had a natural ending, and it was time to acknowledge that.
